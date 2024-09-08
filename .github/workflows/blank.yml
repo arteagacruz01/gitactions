@@ -17,6 +17,10 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    env:
+      platform: aws
+      region: us-east-1
+      account: 123456
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -24,3 +28,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: "mostrar pasos"
         run: echo "hola mundo"
+
+      - name: "mostrar variables de entorno"
+        run: |
+          echo "valor de platform: ${{env.platform}}"
+          echo "valor de region: ${{env.region}}"
+          echo "valor de acount: ${{env.account}}"
