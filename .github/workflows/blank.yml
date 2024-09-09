@@ -40,7 +40,7 @@ jobs:
            echo "valor de usernaame: ${{env.username}}"
             echo "valor de password: ${{env.password}}"
 
-      - name:
+      - name: "mostrar war"
         if: ${{env.username != '' && env.password != ''}}
         run: |
           echo "si existe uuario y contraseña"
