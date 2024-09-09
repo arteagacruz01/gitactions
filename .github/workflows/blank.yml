@@ -21,6 +21,8 @@ jobs:
       platform: aws
       region: us-east-1
       account: 123456
+      username: ${{secrets.USERNAME}}
+      password: ${{secrets.PASSWORD}}
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -35,6 +37,8 @@ jobs:
           echo "valor de platform: ${{env.platform}}"
           echo "valor de region: ${{env.region}}"
           echo "valor de acount: ${{env.account}}"
+           echo "valor de usernaame: ${{env.username}}"
+            echo "valor de password: ${{env.password}}"
 
       - name: "mostrr variables por defecto"
         run: |
