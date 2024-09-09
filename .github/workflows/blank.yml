@@ -36,7 +36,8 @@ jobs:
           echo "valor de region: ${{env.region}}"
           echo "valor de acount: ${{env.account}}"
 
-      - name: "mostrr variables de entorno"
+      - name: "mostrr variables por defecto"
         run: |
          echo "Evento: ${{toJSON(github.event)}}"
-      
+         echo "Githbu_ACTOR: $GITHUB_ACTOR"
+         echo "Githbu_REPOSITORY: $GITHUB_REPOSITORY"
