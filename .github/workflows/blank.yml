@@ -39,6 +39,7 @@ jobs:
           echo "valor de acount: ${{env.account}}"
            echo "valor de usernaame: ${{env.username}}"
             echo "valor de password: ${{env.password}}"
+            echo "valor varibl: ${{vars.PROJECT_VERSION}}"
 
       - name: "mostrar war"
         if: ${{env.username != '' && env.password != ''}}
